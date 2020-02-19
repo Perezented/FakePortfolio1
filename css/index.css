@@ -1,0 +1,309 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  width: 90%;
+  margin: 0 5%;
+}
+nav {
+  padding: 2% 0;
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  margin: 0 2%;
+  color: grey;
+}
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+  }
+  nav a {
+    text-align: center;
+    padding: 2% 0;
+    margin: 1%;
+    border: 1px solid grey;
+    border-radius: 3px;
+  }
+}
+.greybox {
+  background-color: lightgrey;
+  padding: 2%;
+}
+.greybox .nameText {
+  border-bottom: 1px solid grey;
+  padding: 2% 0;
+}
+.greybox .nameText h1 {
+  font-size: 3.5rem;
+}
+.greybox .nameText p {
+  font-size: 1.6rem;
+  padding-bottom: 0;
+}
+.greybox p {
+  padding: 2% 0;
+}
+.greybox button {
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: grey;
+  margin-bottom: 2%;
+}
+.greybox .image {
+  max-width: 12%;
+}
+.greybox .image img {
+  max-width: 100%;
+}
+@media (max-width: 500px) {
+  .greybox {
+    display: grid;
+    gap: 5%;
+    grid-template-areas: "photo name name" "inte inte inte" "but . .";
+    padding: 5%;
+  }
+  .greybox .image {
+    max-width: 100%;
+    grid-area: photo;
+  }
+  .greybox .nameText {
+    grid-area: name;
+  }
+  .greybox .nameText h1 {
+    font-size: 2rem;
+  }
+  .greybox .interested {
+    width: 300%;
+    grid-area: inte;
+    margin: 10%;
+  }
+  .greybox buttton {
+    grid-area: but;
+  }
+}
+.info {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.info div {
+  padding: 2%;
+}
+.info .listen h2 {
+  font-size: 3rem;
+  padding: 2%;
+}
+.info .listen p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.info .stuff {
+  width: 80%;
+}
+.info .stuff h3 {
+  font-size: 2rem;
+  padding: 2%;
+}
+.info .stuff .excel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.info .stuff .excel li {
+  list-style: none;
+  font-size: 1.4rem;
+  border: 1px dotted grey;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .info {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .info .stuff {
+    width: 100%;
+    border-bottom: 2px solid lightgrey;
+  }
+  .info .listen {
+    border-bottom: 2px solid lightgrey;
+  }
+  .info .listen h2 {
+    font-size: 2.2rem;
+  }
+  .info .listen p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+.workHistory {
+  padding: 2%;
+}
+.workHistory h3 {
+  font-size: 2rem;
+  padding: 2%;
+}
+.workHistory .table .labels {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.workHistory .table .labels,
+.workHistory .table .t1,
+.workHistory .table .t2 {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 0.7fr;
+  padding: 2% 0;
+  padding-left: 3%;
+}
+.workHistory .table .t1 {
+  background-color: grey;
+}
+.workHistory .table .t2 {
+  background-color: lightgrey;
+}
+footer {
+  background-color: lightgrey;
+  padding: 2% 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+@media (max-width: 500px) {
+  footer {
+    margin-top: 7%;
+  }
+}
